@@ -243,6 +243,11 @@ body {
 	flex: 0 0 200px;
 }
 
+.item__image:hover {
+	transform: scale(1.1);
+	transition: 1s;
+} 
+
 .item__body {
 	flex: 1 1 auto;
 	padding: 0px 0px 0px 15px;
@@ -296,6 +301,11 @@ body {
 	padding: 0px 0px 20px 0px;
 	display: flex;
 	flex-direction: column;
+}
+
+.vertical__item:hover	 {
+	transform: scale(1.1);
+	transition: 1s;
 }
 
 .vertical__subtitle {
@@ -470,4 +480,3 @@ a {
 	max-width: 100%;
 }
 .slider__item.slick-center{}
-
