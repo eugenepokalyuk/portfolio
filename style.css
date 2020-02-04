@@ -22,10 +22,13 @@ figure {
 	text-align: center;
 }
 
+p {
+  font-size: 22px;
+}
+
 .container {
   max-width: 928px;
   margin: 0 auto;
-  padding: 0 16px;
 }
 
 .page-header {
@@ -77,16 +80,20 @@ figure {
 }
 
 .intro {
-  margin: 0 0 60px;
+  padding: 60px 0;
 }
 
 .subheading {
   margin: 0px 0 56px;
   font-family: "Old Standard TT", "Times", "Times New Roman", serif;
-  font-size: 64px;
-  line-height: 80px;
-  font-weight: 400;
   text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .user-image {
@@ -97,12 +104,6 @@ figure {
 .intro h3,
 .portfolio h3 {
   margin: 0 0 12px;
-  font-size: 28px;
-  line-height: 40px;
-  font-weight: 500;
-}
-.intro h2 {
-  padding: 50px 0 0 0;
 }
 
 .intro p {
@@ -226,11 +227,6 @@ figure {
   background-image: url("img/icon-phone.svg");
 }
 
-.music-box iframe {
-	width: 200px;
-	height: 200px;
-}
-
 .image-size {
 	width: 200px;
 	height: 200px;
@@ -250,6 +246,7 @@ figure {
 
 .container-module li {
 	list-style-type: none;
+  font-size: 24px;
 }
 
 .module {
