@@ -1,0 +1,660 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+	background-color: transparent;
+}
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+}
+
+.container {
+	display: flex;
+	max-width: 1150px;
+	margin: 0 auto;	
+	flex-direction: column;
+}
+
+.content {
+	margin: 0 auto;	
+	flex: 1 1 auto;
+}
+
+.header {
+	background-color: #ffffff;
+}
+.header__nav {
+	display: flex;
+	background-color: #9aa5a7;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__nav p {
+	margin-left: auto;
+}
+
+div .header {
+	background-color: transparent;
+}
+
+.header__nav {
+	transform: scale(1);
+	transition: 2s;
+}
+
+
+.header__nav__button {
+	text-decoration: none;
+	border: 1px solid #848c8f;
+	padding: 10px 15px 10px 15px;
+	background-color: #848c8f;
+}
+
+
+.header__nav__button:hover {
+	background-color: #dcdfdf;
+	border: 1px solid #dcdfdf;
+	transition: 0.5s;
+}
+
+
+.header__nav__text:nth-child(2) {
+	text-align: center;
+}
+
+.header__nav__button:nth-child(2) {
+	margin-left: auto;	
+}
+
+.header__row {
+	flex-wrap: wrap;
+	max-width: 1150px;
+}
+.header__menu {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 2px;
+}
+
+.header__menu ul {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__menu a {
+	text-decoration: none;
+	color: initial;
+}
+
+.header__menu a:hover:not(.header__logo) {
+	border-bottom: 1px solid #000000;
+}
+
+.header__menu li {
+	padding: 0px 10px 0px 10px;
+}
+
+.header__logo {
+	font-size: 40px;
+	text-transform: none;
+	font-family: 'Dancing Script', cursive;
+	
+
+}
+
+.header .header__logo {
+	color: #8f3920;
+}
+
+.header__logo:hover {
+	color: #000;
+	transform: scale(1.1);
+}
+
+.header__menu__image {
+	width: 30px;
+}
+
+.about {
+	text-align: center;
+}
+
+.about__row p{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+}
+
+.about__img {
+	width: 1150px;
+	height: 500px;
+	background-image: url('img/about-image.jpg');
+	background-repeat: no-repeat;
+}
+
+.about__img div {
+	
+}
+
+.about__title {
+	padding: 180px 0px 35px 0px;
+
+}
+
+.about__title p {
+	margin: auto;
+	max-width: 550px;
+	font-size: 32px;
+}
+
+.about__row {
+	display: flex;	
+
+}
+
+.about__button a{
+	padding: 15px;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 2px;
+	text-decoration: none;
+	border: 1px solid #a88b69;
+	background-color: #a88b69;
+}
+
+.about__button a:hover {
+	border: 1px solid #70502e;
+	background-color: #70502e;
+}
+
+.skills {}
+
+
+.skills__img {
+	max-width: 80px;
+}
+
+.skills__subtitle {
+	font-size: 32px;
+	color: #000000;
+	text-align: center;
+	padding: 0px 220px 60px 220px;
+}
+
+.skills__title {
+	font-family: 'Dancing Script', cursive;
+	font-size: 32px;
+	padding: 10px 0px 10px 0px;
+	color: #000000;
+}
+
+.skills__text {
+	font-size: 12px;
+	color: #000000;
+	padding: 0px 0px 40px 0px;
+}
+
+.skills__row {
+	display: flex;
+	flex-wrap: wrap;
+	color: #fff;
+	padding: 0px 0px 20px 0px;
+	justify-content: center;
+	margin: 120px 0px 120px 0px;
+}
+.skills__item {
+	display: flex;
+	flex-direction: column;
+	max-width: 20%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-left: 2%;
+}
+
+.skills__item div {
+}
+
+.skills__button {
+	transition: 2s;
+}
+
+.skills__button a{
+	padding: 15px;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 2px;
+	text-decoration: none;
+	border: 1px solid #a88b69;
+	background-color: #a88b69;
+}
+
+.skills__button a:hover {
+	border: 1px solid #70502e;
+	background-color: #70502e;
+}
+
+
+.creator {
+	
+}
+.creator__row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px 0px 0px 0px;
+	background-color: #d2cec3;
+}
+.creator__img {
+	display: flex;
+	flex-direction: column;
+}
+
+.creator__item {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	padding: 100px 35px 0px 35px;
+	width: 45%;
+}
+
+.creator__item p {
+	color: #000000;
+	font-size: 14px;
+	padding: 12px 0px 12px 0px;
+}
+
+.creator__signature {
+	font-family: 'Dancing Script', cursive;
+	font-size: 32px;
+	padding: 10px 0px 10px 0px;
+	color: #000000;
+}
+
+.creator__title {
+	font-size: 32px;
+	color: #000000;
+}
+.creator__text {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.creator__button {
+	margin: 38px 0px 38px 0px;
+}
+
+.creator__button a{
+	padding: 15px;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 2px;
+	text-decoration: none;
+	border: 1px solid #a88b69;
+	background-color: #a88b69;
+}
+
+.creator__button a:hover {
+	border: 1px solid #70502e;
+	background-color: #70502e;
+}
+
+.posts {
+	flex: 0 0 auto;
+}
+
+.posts__signature {
+	font-size: 34px;
+	font-family: 'Dancing Script', cursive;
+	color: #000000;
+	text-align: center;
+	padding: 100px 33% 30px 33%;
+}
+
+.posts__row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex: 1 0 auto;
+}
+.posts__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 220px;
+	margin-left: 2%;
+	background-color: #f7f6f2;
+	min-height: 100%;
+	flex: 0 0 auto;
+}
+
+.posts__item:hover {
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
+.posts__item div {
+    
+}
+
+.posts__suptext {
+	font-size: 12px;
+	color: #000000;
+	text-transform: uppercase;
+	margin: 35px 0px 10px 0px;
+	border-bottom: 1px solid #000000;
+}
+
+.posts__title {
+	text-align: center;
+	color: #000000;
+	margin: 15px 10px 20px 10px;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
+.posts__img {}
+.posts__img img {
+	width: 220px;
+	height: 130px;
+}
+
+.posts__link a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.posts__link {
+	width: 100%;
+	text-align: center;
+	background-color: #212224; 
+}
+
+.posts__button {
+	margin: 38px 0px 38px 0px;
+	text-align: center;
+}
+
+.posts__button a{
+	padding: 15px;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 2px;
+	text-decoration: none;
+	border: 1px solid #9aa5a7;
+	background-color: #9aa5a7;
+}
+
+.posts__button a:hover {
+	border: 1px solid #616b6d;
+	background-color: #616b6d;
+}
+
+.course {
+
+}
+.course__row {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #d2cec3;
+}
+.course__img {
+	width: 530px;
+	height: 650px;
+}
+
+.course__item {
+	display: flex;
+	color: #fff;
+	padding: 0px 0px 0px 0px;
+	align-items: center;
+}
+
+.course__item p {
+	color: #000000;
+	font-size: 14px;
+	padding: 12px 0px 12px 0px;
+}
+
+.course__task {
+	margin: 10px 10px 10px 10px;
+	padding: 130px 60px 130px 60px;
+	width: 50%;
+}
+
+.course__signature {
+	font-family: 'Dancing Script', cursive;
+	font-size: 32px;
+	padding: 10px 0px 10px 0px;
+	color: #000000;
+}
+
+.course__title {
+	font-size: 32px;
+	color: #000000;
+}
+
+.course__text {
+	font-size: 14px;
+	font-weight: 300;
+}
+.course__button:last-child {
+	margin: 20px 0px 0px 0px;
+}
+
+.course__email {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+} 
+
+.course__email input {
+	padding: 15px;
+	text-transform: uppercase;
+	color: #000000;
+	letter-spacing: 2px;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	background-color: #ffffff;
+}
+
+.course__button:nth-child(2) {
+	flex-direction: row;
+}
+
+.course__button input:nth-child(2) {
+	padding: 15px;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 2px;
+	text-decoration: none;
+	border: 1px solid #a88b69;
+	background-color: #a88b69;
+}
+
+.course__button input:hover:nth-child(2) {
+	border: 1px solid #70502e;
+	background-color: #70502e;
+}
+
+.footer {
+}
+
+.footer__row {
+	display: flex;
+	flex-direction: column;
+	background-color: #9aa5a7;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__logo {
+	font-size: 40px;
+	font-family: 'Dancing Script', cursive;
+	transition: 1s;	
+}
+
+.footer__logo:hover {
+	transform: scale(1.1);
+}
+
+.footer__logo a {
+	color: #ffffff;
+}
+
+.footer__social img{
+	width: 32px;
+	margin: 0px 10px 10px 10px;
+}
+
+.footer__social__img {
+	display: flex;
+	transition: 1s;
+}
+
+.footer__social__img a {
+	transition: 1s;
+}
+
+.footer__social__img a:hover {
+	transform: scale(1.5);
+}
+
+.header__menu {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 2px;
+}
+
+.footer__menu ul {
+	display: flex;
+	list-style: none;
+}
+
+.footer__menu a {
+	text-decoration: none;
+	color: initial;
+	color: #ffffff;
+}
+
+.footer__menu a:hover {
+	border-bottom: 1px solid #ffffff;
+}
+
+.footer__menu li {
+	padding: 0px 10px 0px 10px;
+}
+
+.footer__menu {
+	margin: 15px 0px 19px 0px;
+}
+
+.footer__copyright {
+	text-align: center;
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+
+/*.posts__link {
+	width: 100%;
+	background-color: #9aa5a7; 
+}
+
+.posts__link {
+	width: 100%;
+	background-color: #a88d70; 
+}*/
