@@ -45,25 +45,18 @@ h1 {
   margin: 0 auto;
 }
 
+.btn {
+  border: 1px solid #000;
+  background-color: #000;
+  padding: 10px 10px;
+}
+
 .btn__soon{
   border: 1px solid #000;
   background-color: #000;
   padding: 10px 10px;
 }
 
-.skills__btn {
-  display: flex;
-  border: 1px solid #000;
-  background-color: #000;
-  padding: 10px 10px;
-}
-
-
-.btn {
-  border: 1px solid #000;
-  background-color: #000;
-  padding: 10px 10px;
-}
 
 .btn:hover, .skills__btn:hover, .btn__soon:hover {
   background-color: #474747;
@@ -84,13 +77,13 @@ h1 {
 .footer a {
   display: flex;
   margin-left: 2%;
+  padding: 1% 0;
 } 
 
 .about{}
 
 .about__image {
   border-radius: 100%;
-  border: 1px solid black; 
 }
 
 .about__text {
@@ -131,11 +124,11 @@ h1 {
 .skills__row{
   display: flex;
   justify-content: center;
-  align-self: center;
-
+  align-items: center;
   text-align: center;
   margin: 0px 0px 20px 0px;
 }
+
 .skills__column{
   padding: 5px;
 }
@@ -148,6 +141,7 @@ h1 {
 
 .skills__title h1 {
   margin: 0px 0px 15px 0px;
+  text-align: center;
 }
 
 .skills__text {
@@ -169,7 +163,17 @@ h1 {
 
 .skills__item h2 {
   margin: 0px 0px 10px 0px;
+  text-align: center;
 }
+
+.skills__btn {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000;
+  background-color: #000;
+  padding: 10px 10px;
+}
+
 
 .skills__image {
   width: 100px;
@@ -197,7 +201,7 @@ h1 {
   margin: 0px 0px 20px 0px;
 }
 .block__column{
-  padding: 5px;
+  padding: 0.7%;
 }
 
 .block__title {
@@ -213,6 +217,7 @@ h1 {
 
 .block__title h1 {
   padding: 10px 0px 30px 0px;
+  text-align: center;
 }
 
 .block__item{
@@ -229,4 +234,65 @@ h1 {
 
 .block__item p {
   margin: 15px 0px 25px 0px;
+}
+
+@media screen and (max-width: 2560) { 
+  h1 {
+    font-size: 50px;
+  }
+  
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 26px;
+  }
+
+  .about__text {
+    max-width: 900px
+  }
+  footer {
+    font-size: 26px;
+  }
+  
+  .skills__btn {
+    font-size: 25px;
+    justify-content: center;
+  }
+
+  .btn {
+    font-size: 25px;
+    justify-content: center;
+  }
+
+  .btn__soon{
+    font-size: 25px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  .skills__row {
+    display: block;
+  }
+
+  .about__row {
+    display: block;
+  }
+
+  .block__column{
+    display:block;
+    width:80%; /*растягиваем тексовое поле на всю ширину родителя*/
+    border:none;
+    min-width:0;
+  }
+  
+  .block__item {
+    display:inline-block;
+    flex:1 1 auto;
+    width:80%;
+    border:none;
+    min-width:0;
+  }
 }
