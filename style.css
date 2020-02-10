@@ -76,13 +76,13 @@ h1 {
 }
 
 .footer {
-  width: 40%;
-  padding: 25px 10px 25px 10px;
+  padding: 0 20px;
   align-self: flex-end;
   flex: 0 0 auto;
 }
 
 .footer a {
+  display: flex;
   margin-left: 2%;
 } 
 
