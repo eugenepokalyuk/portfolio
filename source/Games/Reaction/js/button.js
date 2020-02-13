@@ -8,8 +8,8 @@ var button = {
 	changeState: (state) => {
 		button.state = state;
 		button.elem.innerHTML = state.text;
-		button.elem.disabled = state?.disabled ? true : false;
-		button.elem.onclick = state?.click;
+		button.elem.disabled = state.disabled ? true : false;
+		button.elem.onclick = state.click;
 	},
 
 	states: {
