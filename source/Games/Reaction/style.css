@@ -23,15 +23,18 @@ body {
 	padding: 0;
 	
 	background: #4784a1;
-	box-shadow: 0 500px 300px 100px #222226 inset;
+
+/*	box-shadow: 0 500px 300px 100px #222226 inset;
 	animation: background 6s infinite alternate;
-}
+
 
 @keyframes background {
   50% {
     background: #222226;
     box-shadow: 0 -500px 300px -100px #4784a1 inset;
   }
+*/
+
 }
 
 .fth-task {
