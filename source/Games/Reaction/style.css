@@ -1,0 +1,70 @@
+canvas {
+	display: flex;
+	margin: 0 auto;
+	width: 90vmin;
+	height: 90vmin;
+	cursor: crosshair;
+}
+
+* { 
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Montserrat', sans-serif;
+	user-select: none;
+	overflow: hidden;
+
+	margin: 0;
+	padding: 0;
+	
+	background: #4784a1;
+	box-shadow: 0 500px 300px 100px #222226 inset;
+	animation: background 6s infinite alternate;
+}
+
+@keyframes background {
+  50% {
+    background: #222226;
+    box-shadow: 0 -500px 300px -100px #4784a1 inset;
+  }
+}
+
+.fth-task {
+	display: block;
+	text-align: center;
+}
+
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	width: 90vmin;
+	height: 10vmin;
+	background-color: #333336;
+	border: 1px solid #333336;
+	transition: 1s;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 28px rgba(0,0,0,0.22);
+}
+
+.btn:hover {
+	background-color: #4784a1;
+	border: 1px solid #4784a1;
+}
+
+.btn:disabled {
+	background-color: #707070;
+	border: 1px solid #707070;
+}
+
+.btn:active {
+	background-color: #4784a1;
+	border: 1px solid #4784a1;
+	transform: scale(0.95);
+}
