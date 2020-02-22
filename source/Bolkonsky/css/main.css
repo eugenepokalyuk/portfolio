@@ -211,27 +211,6 @@ h1, .h1 {
   font-size: 36px;
 }
 
-h2, .h2 {
-  font-size: 30px;
-}
-
-h3, .h3 {
-  font-size: 24px;
-}
-
-h4, .h4 {
-  font-size: 18px;
-}
-
-h5, .h5 {
-  font-size: 16px;
-}
-
-h6, .h6 {
-  font-size: 14px;
-  color: #222222;
-}
-
 td, th {
   border-radius: 0px;
 }
@@ -245,6 +224,10 @@ td, th {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
+.backjpg {
+  max-width: 350px;
+}
+
 .clear::before, .clear::after {
   content: " ";
   display: table;
@@ -854,11 +837,11 @@ b, i, sup, sub, u, del {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 h3 {
@@ -2021,7 +2004,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.p1-gradient-bg, .primary-btn, .primary-btn2:hover, .order-btn, .donut-widget[data-chart-instance="1"] .donut-bite[data-segment-index="0"].large::after, .donut-widget[data-chart-instance="2"] .donut-bite[data-segment-index="0"].large::after, .donut-widget[data-chart-instance="3"] .donut-bite[data-segment-index="0"].large::after, .testimonial-area .overlay-bg, .footer-social a:hover, .single-footer-widget .bb-btn, .generic-banner {
+.call-btn {
+  background-color: #8cedb6;
+}
+.order-btn {
+  background-color: #908ced;
+}
+
+.call-btn:hover {
+  background-color: #30935b;
+
+}
+.order-btn:hover {
+  background-color: #5752c1;
+}
+
+/*.p1-gradient-bg, .primary-btn, .primary-btn2:hover, .order-btn, .donut-widget[data-chart-instance="1"] .donut-bite[data-segment-index="0"].large::after, .donut-widget[data-chart-instance="2"] .donut-bite[data-segment-index="0"].large::after, .donut-widget[data-chart-instance="3"] .donut-bite[data-segment-index="0"].large::after, .testimonial-area .overlay-bg, .footer-social a:hover, .single-footer-widget .bb-btn, .generic-banner {
   background-image: -moz-linear-gradient(0deg, #908ced 0%, #b56fe8 100%);
   background-image: -webkit-linear-gradient(0deg, #908ced 0%, #b56fe8 100%);
   background-image: -ms-linear-gradient(0deg, #908ced 0%, #b56fe8 100%);
@@ -2040,7 +2038,7 @@ h1, h2, h3, h4, h5, h6 {
   background: -ms-linear-gradient(0deg, #908ced 0%, #b56fe8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+}*/
 
 .primary-btn {
   line-height: 42px;
@@ -2250,13 +2248,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-btn:hover {
   border: 1px solid #fff;
-  background: transparent;
   color: #fff;
+}
+
+.promotion--img-header {
+  width: 100px;
+  height: 100px;
+  /*padding-top: 10px;*/
+  margin-bottom: -25px;
+  text-align: center;
+}
+
+.promotion--header {
+  padding-bottom: 0px;
+}
+
+.img_size {
+  max-width: 421px;
+  height: 200px;
 }
 
 @media (max-width: 800px) {
   .service-area, .pb-150 {
     padding-bottom: 0px !important;
+  }
+  .img_size {
+    max-width: 200px;
+    height: 200px;
   }
 }
 
@@ -2285,18 +2303,40 @@ h1, h2, h3, h4, h5, h6 {
   .sigle-service {
     margin-bottom: 60px;
   }
+  .img_size {
+    max-width: 200px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 798px) {
   .sigle-service {
     text-align: center;
   }
+  .img_size {
+    max-width: 200px;
+    height: 200px;
+  }
 }
 
 .about-area {
+  color: #fff;
+  text-align: center;
   background: url(../img/about-bg.png) no-repeat center center;
   background-size: cover;
   background-position: center;
+}
+
+.container-fluid {
+  margin: auto;
+}
+
+.about-area_text {
+  font-size: 32px;
+}
+
+.about-area h1 {
+  color: #fff;
 }
 
 .about-left {
@@ -2550,6 +2590,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   border: 1px solid #f5f5f5;
   display: inline-flex;
+}
+
+.row {
+  display: flex;
+  align-self: center;
+  align-items: center;
 }
 
 .single-testimonial {
