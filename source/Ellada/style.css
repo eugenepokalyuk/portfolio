@@ -40,6 +40,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -83,6 +84,7 @@ select {
 }
 
 body {
+	/*font-family: 'BebasNeueRegular';*/
   font-family: "Old Standard TT", "Times", "Times New Roman", serif;
 }
 
@@ -94,7 +96,14 @@ body {
 .wrapper__image img {
 	width: 700px;
 	margin: 0 auto;	
-	padding: 25px 0;
+}
+
+.wrapper__image {
+	transition: 0.5s;
+}
+
+.wrapper__image:hover {
+	transform: scale(1.2);
 }
 
 .container{
@@ -366,6 +375,14 @@ body {
 .vertical__btn:hover {
 	background-color: #3d96f0;
 	color: #fff;
+}
+
+.vertical__text li:nth-child(6) {
+	margin-bottom: 0px;
+}
+
+.vertical__text-placeholder {
+	color: #C0C0C0;
 }
 
 a {
