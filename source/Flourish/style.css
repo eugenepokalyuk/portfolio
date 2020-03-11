@@ -658,3 +658,13 @@ a {
 	width: 100%;
 	background-color: #a88d70; 
 }*/
+
+@media screen and (max-width: 500px) { 
+  body {
+    max-width: 100%;
+  }
+	
+.skills__item {
+	max-width: 25%;
+}
+}
