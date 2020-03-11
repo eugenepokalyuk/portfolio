@@ -292,7 +292,7 @@ div .header {
 .skills__item {
 	display: flex;
 	flex-direction: column;
-	max-width: 20%;
+	max-width: 25%;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
