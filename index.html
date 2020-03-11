@@ -196,46 +196,16 @@
         <div class="banner__column">
             <div class="banner__item">
               <h1>Заказать сайт</h1>
-              <?php
-              if(isset($_POST['submit'])){
-               ?>
-              <form action="mailto:eugene.pokalyuk@gmail.com" method="post">
+              <form action="https://formfor.site/send/JS0AwKqgkOMRAxI2wzTRv7lkqZ3qhb" method="POST">
                 
                 <input type="text" name="name" id="name" class="banner__txt" tabindex="1" placeholder="Ваше ФИО" required><br/>
                 
-                <input type="text" name="email" id="email" class="banner__txt" tabindex="2" placeholder="Электронный адрес" required><br/>
+                <input type="email" name="email" id="email" class="banner__txt" tabindex="2" placeholder="Электронный адрес" required><br/>
                 
                 <textarea name="message" id="message" class="banner__txtarea" placeholder="Подробнее опишите ваше сообщение" tabindex="3" required></textarea>
 
                 <input type="submit" id="submit" class="btn__reverse" name="submit" tabindex="4" value="Отправить">
               </form>
-
-              <?php
-                } else {
-                 //показываем форму
-                 $name = $_POST['name'];
-                 $email = $_POST['email'];
-                 $message = $_POST['message'];
-
-                 $name = htmlspecialchars($name);
-                 $email = htmlspecialchars($email);
-                 $message = htmlspecialchars($message);
-
-                 $name = urldecode($name);
-                 $email = urldecode($email);
-                 $message = urldecode($message);
-
-                 $name = trim($fnameio);
-                 $email = trim($email);
-                 $message = trim($message);
-
-                 if (mail("eugene.pokalyuk@gmail.com", "Заявка с сайта", "ФИО:".$name.". E-mail: ".$email.". Message: ".$message ,"From: example2@mail.ru \r\n")){
-                 echo "Сообщение успешно отправлено";
-                 } else {
-                 echo "При отправке сообщения возникли ошибки";
-                 }
-                }
-                ?>
 
             </div>
             <div class="banner__item banner__item-none">
