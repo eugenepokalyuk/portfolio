@@ -197,7 +197,7 @@
             <div class="banner__item">
               <h1>Заказать сайт</h1>
               <?php
-              if(!isset($_POST['fio']) and !isset($_POST['email'])){
+              if(isset($_POST['submit'])){
                ?>
               <form action="mailto:eugene.pokalyuk@gmail.com" method="post">
                 
@@ -207,7 +207,7 @@
                 
                 <textarea name="message" id="message" class="banner__txtarea" placeholder="Подробнее опишите ваше сообщение" tabindex="3" required></textarea>
 
-                <input type="submit" id="submitbtn" class="btn__reverse" name="submitbtn" tabindex="4" value="Отправить">
+                <input type="submit" id="submit" class="btn__reverse" name="submit" tabindex="4" value="Отправить">
               </form>
 
               <?php
@@ -229,7 +229,7 @@
                  $email = trim($email);
                  $message = trim($message);
 
-                 if (mail("eugene.pokalyuk@gmail.com", "Заявка с сайта", "ФИО:".$name.". E-mail: ".$email.". Message: ".$message ,"From: mackspavlov@gmail.com \r\n")){
+                 if (mail("eugene.pokalyuk@gmail.com", "Заявка с сайта", "ФИО:".$name.". E-mail: ".$email.". Message: ".$message ,"From: example2@mail.ru \r\n")){
                  echo "Сообщение успешно отправлено";
                  } else {
                  echo "При отправке сообщения возникли ошибки";
@@ -237,25 +237,6 @@
                 }
                 ?>
 
-              <script>
-                  $(document).ready(function () {
-                      $('form').submit(function () {
-                          var formID = $(this).attr('id'); // Получение ID формы
-                          var formNm = $('#' + formID);
-                          $.ajax({
-                              type: 'post',
-                              url: 'feedback.php', // Обработчик формы отправки
-                              data: formNm.serialize(),
-                              success: function (data) {
-                                  // Вывод текста результата отправки в текущей форме
-                                  $(formNm).html(data);
-                              }
-                          });
-                          return false;
-                      });
-                  });
-              </script>
-          
             </div>
             <div class="banner__item banner__item-none">
               <figure>
